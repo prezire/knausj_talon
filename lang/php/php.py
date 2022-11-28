@@ -230,3 +230,8 @@ class UserActions:
 
     def code_insert_return_type(type: str):
         actions.insert(f": {type}")
+
+    def insert_between(before: str, after: str):
+        actions.insert(before + after)
+        for _ in after:
+            actions.edit.left()

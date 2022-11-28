@@ -1,4 +1,4 @@
-from talon import Module
+from talon import Module, actions
 
 mod = Module()
 
@@ -28,3 +28,8 @@ class Actions:
 
     def terminal_kill_all():
         """kills the running command"""
+
+    def insert_between(before: str, after: str):
+        actions.insert(before + after)
+        for _ in after:
+            actions.edit.left()

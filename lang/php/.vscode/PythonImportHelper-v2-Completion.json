@@ -1,0 +1,62 @@
+[
+    {
+        "label": "Context",
+        "importPath": "talon",
+        "description": "talon",
+        "isExtraImport": true,
+        "detail": "talon",
+        "documentation": {}
+    },
+    {
+        "label": "actions",
+        "importPath": "talon",
+        "description": "talon",
+        "isExtraImport": true,
+        "detail": "talon",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "talon",
+        "description": "talon",
+        "isExtraImport": true,
+        "detail": "talon",
+        "documentation": {}
+    },
+    {
+        "label": "UserActions",
+        "kind": 6,
+        "importPath": "php",
+        "description": "php",
+        "peekOfCode": "class UserActions:\n    def code_self():\n        actions.auto_insert(\"$this\")\n    def code_operator_object_accessor():\n        actions.auto_insert(\"->\")\n    def code_define_class():\n        actions.auto_insert(\"class \")\n    def code_block():\n        actions.insert(\"{}\")\n        actions.edit.left()",
+        "detail": "php",
+        "documentation": {}
+    },
+    {
+        "label": "ctx",
+        "kind": 5,
+        "importPath": "php",
+        "description": "php",
+        "peekOfCode": "ctx = Context()\nctx.matches = r\"\"\"\ntag: user.php\n\"\"\"\nctx.lists[\"user.code_type\"] = {\n    \"int\": \"int\",\n    \"float\": \"float\",\n    \"string\": \"string\",\n    \"bool\": \"bool\",\n    \"array\": \"array\",",
+        "detail": "php",
+        "documentation": {}
+    },
+    {
+        "label": "ctx.matches",
+        "kind": 5,
+        "importPath": "php",
+        "description": "php",
+        "peekOfCode": "ctx.matches = r\"\"\"\ntag: user.php\n\"\"\"\nctx.lists[\"user.code_type\"] = {\n    \"int\": \"int\",\n    \"float\": \"float\",\n    \"string\": \"string\",\n    \"bool\": \"bool\",\n    \"array\": \"array\",\n    \"null\": \"null\",",
+        "detail": "php",
+        "documentation": {}
+    },
+    {
+        "label": "ctx.lists[\"user.code_type\"]",
+        "kind": 5,
+        "importPath": "php",
+        "description": "php",
+        "peekOfCode": "ctx.lists[\"user.code_type\"] = {\n    \"int\": \"int\",\n    \"float\": \"float\",\n    \"string\": \"string\",\n    \"bool\": \"bool\",\n    \"array\": \"array\",\n    \"null\": \"null\",\n    \"void\": \"void\",\n}\n@ctx.action_class(\"user\")",
+        "detail": "php",
+        "documentation": {}
+    }
+]

@@ -1,8 +1,15 @@
 from talon import Context, Module, actions, app
 
-default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip".split(
-    " "
-)
+# Talon.
+#alphabets = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip"
+
+# NATO.
+#alphabets = "alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima mama nancy oscar papa quench romeo sierra tango uniform victory whisky plex yank zip"
+
+# Mixed.
+alphabets = "alpha bravo charlie delta echo fox golf harp india juliet kilo lima mama nancy oscar papa quick romeo sun tango uni vice whisky plex yank zip"
+
+default_alphabet = alphabets.split(" ")
 letters_string = "abcdefghijklmnopqrstuvwxyz"
 
 default_digits = "zero one two three four five six seven eight nine".split(" ")
