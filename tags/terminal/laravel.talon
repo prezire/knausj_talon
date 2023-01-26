@@ -1,23 +1,21 @@
 artisan [<user.text>]: insert("php artisan " + text)
-artisan make [<user.text>]: insert("php artisan make:" + text)
-artisan route list: "php artisan route:list"
 
-lara tail logs:
+sail user:
+    'su sail'
+    key('enter')
+sail exec: user.insert_between('./vendor/bin/sail exec ', ' bash')
+
+route list: "php artisan route:list"
+tail logs:
     "tail -f storage/logs/laravel.log"
     key('enter')
 
-sail [<user.text>]: insert("./vendor/bin/sail " + text)
-
 docker c e: user.insert_between('docker-compose exec ', ' bash')
-
 docker c up: 'docker-compose up '
-
 docker p s: 'docker ps'
-
 docker container l s: 'docker container ls'
 
 n p m run: 'npm run '
-
 sources:
     'cd ~/Documents/Sources'
     key('enter')
@@ -55,14 +53,21 @@ find file:
 find directory:
     user.insert_between('find . -type d | grep "', '"')
 
-grep:
-    " | grep "
+grep: ' | grep '
 
-history grep:
-    "history | grep "
+history grep: 'history | grep '
 
 permissions:
     user.insert_between('chmod -R ', ' .')
 
 owner:
     user.insert_between('chown -R ', ' .')
+
+seed: 'php artisan db:seed'
+migrate: 'php artisan migrate'
+migrate fresh: 'php artisan migrate:fresh'
+migrate fresh seed: 'php artisan migrate:fresh --seed'
+make model: 'php artisan make:model '
+make controller: 'php artisan make:controller '
+make migration: 'php artisan make:migration '
+make factory: 'php artisan make:factory '
