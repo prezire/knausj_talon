@@ -15,6 +15,18 @@ docker c up: 'docker-compose up '
 docker p s: 'docker ps'
 docker container l s: 'docker container ls'
 
+clear config: 'php artisan config:clear'
+clear cache: 'php artisan cache:clear'
+clear view: 'php artisan view:clear'
+clear optimize: 'php artisan optimize:clear'
+clear compiled: 'php artisan clear-compiled'
+clear event: 'php artisan event:clear'
+clear route: 'php artisan route:clear'
+clear schedule cache: 'php artisan schedule:clear-cache'
+clear queue: 'php artisan queue:clear'
+clear debug bar: 'php artisan debugbar:clear'
+optimize: 'php artisan optimize'
+
 n p m run: 'npm run '
 sources:
     'cd ~/Documents/Sources'
