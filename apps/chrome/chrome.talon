@@ -1,7 +1,7 @@
 profile switch: user.chrome_mod("shift-m")
 
 localhost: 'http://localhost'
-chat g p t:
+ai g p t:
     'https://chat.openai.com/chat'
     key('enter')
 
@@ -31,4 +31,12 @@ quora:
 
 github:
     'https://github.com'
+    key('enter')
+
+you tube:
+    'https://www.youtube.com'
+    key('enter')
+
+stack overflow:
+    'https://stackoverflow.com'
     key('enter')

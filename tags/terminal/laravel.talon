@@ -1,13 +1,14 @@
 artisan [<user.text>]: insert("php artisan " + text)
 
+sail up: './vendor/bin/sail up'
 sail user:
     'su sail'
     key('enter')
 sail exec: user.insert_between('./vendor/bin/sail exec ', ' bash')
 
-route list: "php artisan route:list"
+route list: 'php artisan route:list'
 tail logs:
-    "tail -f storage/logs/laravel.log"
+    'tail -f storage/logs/laravel.log'
     key('enter')
 
 docker c e: user.insert_between('docker-compose exec ', ' bash')
@@ -22,9 +23,10 @@ clear optimize: 'php artisan optimize:clear'
 clear compiled: 'php artisan clear-compiled'
 clear event: 'php artisan event:clear'
 clear route: 'php artisan route:clear'
-clear schedule cache: 'php artisan schedule:clear-cache'
+clear schedule: 'php artisan schedule:clear-cache'
 clear queue: 'php artisan queue:clear'
 clear debug bar: 'php artisan debugbar:clear'
+clear optimize: 'php artisan optimize:clear'
 optimize: 'php artisan optimize'
 
 n p m run: 'npm run '
@@ -75,6 +77,8 @@ permissions:
 owner:
     user.insert_between('chown -R ', ' .')
 
+tinker: 'php artisan tinker'
+show db: 'php artisan db:show'
 seed: 'php artisan db:seed'
 migrate: 'php artisan migrate'
 migrate fresh: 'php artisan migrate:fresh'
@@ -83,3 +87,4 @@ make model: 'php artisan make:model '
 make controller: 'php artisan make:controller '
 make migration: 'php artisan make:migration '
 make factory: 'php artisan make:factory '
+make seeder: 'php artisan make:seeder '
