@@ -1,5 +1,5 @@
 artisan [<user.text>]: insert("php artisan " + text)
-
+storage link: 'php artisan storage:link'
 sail up: './vendor/bin/sail up'
 sail user:
     'su sail'
@@ -14,7 +14,34 @@ tail logs:
 docker c e: user.insert_between('docker-compose exec ', ' bash')
 docker c up: 'docker-compose up '
 docker p s: 'docker ps'
-docker container l s: 'docker container ls'
+
+docker containers: 'docker container ls'
+docker show all containers: 'docker container ls -a'
+docker delete all containers: 'docker rm $(docker ps -a -q)'
+docker delete dangling containers: 'docker container prune'
+docker delete unused containers: 'docker container prune -a'
+docker show dangling containers: 'docker container ls -f "status=exited"'
+
+docker images: 'docker images'
+docker show all images: 'docker images -a'
+docker delete dangling images: 'docker image prune'
+docker delete unused images: 'docker image prune -a'
+docker delete all images: 'docker rmi $(docker images -q)'
+docker show dangling images: 'docker image ls -f "dangling=true"'
+
+docker delete all images and containers: 'docker system prune -a'
+
+docker networks: 'docker network ls'
+docker show all networks: 'docker network ls -a'
+docker delete all networks: 'docker network prune'
+docker show dangling networks: 'docker network ls -f "dangling=true"'
+docker delete dangling networks: 'docker network prune -f'
+
+docker volumes: 'docker volume ls'
+docker show all volumes: 'docker volume ls -a'
+docker delete all volumes: 'docker volume prune'
+docker show dangling volumes: 'docker volume ls -f "dangling=true"'
+docker delete dangling volumes: 'docker volume prune -f'
 
 clear config: 'php artisan config:clear'
 clear cache: 'php artisan cache:clear'
