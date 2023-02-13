@@ -40,3 +40,7 @@ you tube:
 stack overflow:
     'https://stackoverflow.com'
     key('enter')
+
+lara docs:
+    'https://laravel.com/docs'
+    key('enter')
