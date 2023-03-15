@@ -30,6 +30,7 @@ class Actions:
         """kills the running command"""
 
     def insert_between(before: str, after: str):
+        """Inserts text between two strings"""
         actions.insert(before + after)
         for _ in after:
             actions.edit.left()
